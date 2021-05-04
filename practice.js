@@ -367,31 +367,31 @@
   };
 
   const expandGaugeWidth = () => {
-    if (gaugeInfo.JS.width <= gaugeInfo.BAR_WIDTH * 0.6) {
+    if (gaugeInfo.JS.width <= gaugeInfo.BAR_WIDTH * 0.64) {
       gaugeInfo.JS.width += 2;
     }
-    if (gaugeInfo.HTML_CSS.width <= gaugeInfo.BAR_WIDTH * 0.6) {
+    if (gaugeInfo.HTML_CSS.width <= gaugeInfo.BAR_WIDTH * 0.63) {
       gaugeInfo.HTML_CSS.width += 2;
     }
-    if (gaugeInfo.REACT.width <= gaugeInfo.BAR_WIDTH * 0.3) {
+    if (gaugeInfo.REACT.width <= gaugeInfo.BAR_WIDTH * 0.24) {
       gaugeInfo.REACT.width += 2;
     }
-    if (gaugeInfo.VUE.width <= gaugeInfo.BAR_WIDTH * 0.1) {
+    if (gaugeInfo.VUE.width <= gaugeInfo.BAR_WIDTH * 0.06) {
       gaugeInfo.VUE.width += 2;
     }
   };
 
   const increaseScore = () => {
-    if (gaugeInfo.JS.score < 60) {
+    if (gaugeInfo.JS.score <= 64) {
       gaugeInfo.JS.score += 1;
     }
-    if (gaugeInfo.HTML_CSS.score < 60) {
+    if (gaugeInfo.HTML_CSS.score <= 63) {
       gaugeInfo.HTML_CSS.score += 1;
     }
-    if (gaugeInfo.REACT.score < 30) {
+    if (gaugeInfo.REACT.score < 24) {
       gaugeInfo.REACT.score += 1;
     }
-    if (gaugeInfo.VUE.score < 10) {
+    if (gaugeInfo.VUE.score < 6) {
       gaugeInfo.VUE.score += 1;
     }
   };
@@ -402,8 +402,8 @@
     expandGaugeWidth();
     increaseScore();
     if (
-      gaugeInfo.JS.width > gaugeInfo.BAR_WIDTH * 0.6 &&
-      gaugeInfo.JS.score > 60
+      gaugeInfo.JS.width > gaugeInfo.BAR_WIDTH * 0.64 &&
+      gaugeInfo.JS.score > 64
     ) {
       window.cancelAnimationFrame(gaugeAnimation);
       gaugeInfo.JS.width = 0;
