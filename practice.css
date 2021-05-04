@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "8-bit";
+  src: url("8-BIT WONDER.TTF");
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  perspective: 2000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.top {
+  width: 100vw;
+  height: 1000vw;
+  top: -500vw;
+  transform: rotateX(90deg);
+  background: #1c246d;
+}
+
+.bottom {
+  width: 100vw;
+  height: 1000vw;
+  top: calc(-500vw + 100vh);
+  transform: rotateX(90deg);
+  background: #242056;
+}
+
+.left {
+  left: -500vw;
+  width: 1000vw;
+  height: 100vh;
+  transform: rotateY(90deg);
+  background-image: url("background.png");
+  background-size: contain;
+}
+
+.right {
+  left: -400vw;
+  width: 1000vw;
+  height: 100vh;
+  transform: rotateY(-90deg);
+  background-image: url("background.png");
+  background-size: contain;
+}
+
+.back {
+  transform: translate3d(0, 0, -500vw);
+  background-image: url("background.png");
+  background-size: cover;
+}
+
+.device {
+  width: 60vh;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.keyboard {
+  background: url("keyboard.png");
+  background-size: contain;
+  width: 55vh;
+  height: 20vh;
+  position: absolute;
+  bottom: -20vh;
+  transform: rotateX(60deg);
+  border-radius: 10px;
+}
+
+.control-button {
+  width: 90%;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.control-button .button {
+  width: 16%;
+  height: 100%;
+  border: 2px solid #737172;
+  border-radius: 5px;
+  font-family: "8-bit", sans-serif;
+  font-size: 1.3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.start,
+.shut-down {
+  color: white;
+  background: red;
+}
+
+.monitor {
+  width: 60vh;
+  height: 60vh;
+  border-radius: 15px;
+  border: 10px solid #737172;
+  background: #ccccc7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control-button button:hover {
+  background: tomato;
+  color: white;
+}
+
+.profile {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 70%;
+  margin: 20px 0;
+  border: 5px solid #535353;
+  border-radius: 5px;
+}
+
+.profile canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-image-description {
+  width: 100%;
+  height: 10%;
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2vh;
+  color: gold;
+  font-family: "8-bit", sans-serif;
+}
+
+.mode-control {
+  position: absolute;
+  width: 7%;
+  height: 8%;
+  min-width: 80px;
+  min-height: 30px;
+  top: 1%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mode-control button {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  font-family: "8-bit", sans-serif;
+  font-size: 1.5vh;
+  border: 0;
+  outline: 0;
+}
+
+.dark-mode {
+  background-color: #171717;
+  color: white;
+}
+
+.light-mode:hover {
+  background-color: tomato;
+}
+
+.dark-mode:hover {
+  background-color: tomato;
+}

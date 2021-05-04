@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="practice.css">
+    <title>Introduce Myself</title>
+</head>
+<body>
+    <div class="container">
+        <div class="background-container">
+            <div class="background top"></div>
+            <div class="background bottom"></div>
+            <div class="background left"></div>
+            <div class="background right"></div>
+            <div class="background back"></div>
+        </div>
+        <div class="device">
+            <div class="monitor">
+                <div class="profile">
+                    <div class="canvas-container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="profile-image-description">HELLO WORLD</div>
+               </div>
+               <div class="control-button">
+                   <button class="prev button" data-control="prev">PREV</button>
+                   <button class="esc button" data-control="esc">ESC</button>
+                   <button class="start button" data-control="start">START</button>
+                   <button class="shut-down button" data-control="shut-down">SHUT<br/>DOWN</button>
+                   <button class="enter button" data-control="enter">ENTER</button>
+                   <button class="next button" data-control="next">NEXT</button>
+               </div>
+            </div>
+            <div class="keyboard"></div>
+        </div>
+        <div class="mode-control">
+            <button class="light-mode" data-mode="light">LIGHT</button>
+            <button class="dark-mode" data-mode="dark">DARK</button>
+        </div>
+    </div>       
+    <script src="practice.js"></script>
+</body>
+</html>
